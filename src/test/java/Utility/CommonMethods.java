@@ -4,6 +4,7 @@ import Steps.PageInitializer;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.time.Duration;
 
@@ -19,6 +20,11 @@ public class CommonMethods extends PageInitializer {
             case "chrome":
                 driver=new ChromeDriver();
                 break;
+            case "headless":
+                ChromeOptions ops=new ChromeOptions();
+                ops.addArguments("--headless");
+                driver = new ChromeDriver(ops);
+
         }
         driver.manage().window().maximize();
         driver.get(ConfigReader.getPropertyValue("url"));

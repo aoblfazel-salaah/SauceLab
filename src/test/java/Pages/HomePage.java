@@ -12,6 +12,12 @@ public class HomePage extends CommonMethods {
     @FindBy (xpath = "//div[@class='app_logo' and text()='Swag Labs']")
     public WebElement appLogo;
 
+    @FindBy (id = "react-burger-menu-btn")
+    public WebElement menu_button;
+
+    @FindBy (linkText = "About")
+    public WebElement about_button;
+
     public HomePage(){
         PageFactory.initElements(driver, this);
     }
