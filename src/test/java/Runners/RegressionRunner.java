@@ -10,7 +10,8 @@ import org.junit.runner.RunWith;
         glue = "Steps",
         dryRun = false,
         tags = "@reg",
-        plugin = {"pretty"}
+        plugin = {"pretty", "html:target/report.html",
+                            "json:target/report.json"}
 
 )
 public class RegressionRunner {
