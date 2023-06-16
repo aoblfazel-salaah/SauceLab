@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.time.Duration;
+import java.util.List;
 
 public class CommonMethods extends PageInitializer {
     public static WebDriver driver;
@@ -44,5 +45,10 @@ public class CommonMethods extends PageInitializer {
 
     public static void clickOn(WebElement e){
         e.click();
+    }
+
+    public static void addItemToCart(Integer i){
+        WebElement itemToChoose= homePage.allProductsAddToCartBtns.get(i);
+        clickOn(itemToChoose);
     }
 }
