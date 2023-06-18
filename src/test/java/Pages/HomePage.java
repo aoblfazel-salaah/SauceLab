@@ -24,7 +24,13 @@ public class HomePage extends CommonMethods {
     public WebElement logout_btn;
 
     @FindBy(xpath = "//div[@class='inventory_item']//a[contains(@id,'title_link')]")
-    public List<WebElement> all_Products_HomePage;
+    public List<WebElement> all_Products_HomePage_Links;
+
+    @FindBy(xpath = "//div[@class='inventory_item']//a[contains(@id,'title_link')]//div")
+    public List<WebElement> all_Products_HomePage_Names;
+
+    @FindBy(className = "inventory_item_price")
+    public List<WebElement> allPrices;
 
     @FindBy (xpath = "//div[@class='inventory_item']//button")
     public List<WebElement> allProductsAddToCartBtns;
